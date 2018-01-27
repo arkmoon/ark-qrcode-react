@@ -1,4 +1,4 @@
-i
+<img src="https://i.imgur.com/0ZlJHfL.png" width="100%">
 
 # ARK QR Code React Component
 
@@ -28,7 +28,7 @@ Insert the element in your code and enter your custom properties:
 
 Generates this QR code:
 
-i
+<img src="https://i.imgur.com/vlAsocL.png" width="15%">
 
 ## Properties
 
