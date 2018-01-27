@@ -1,0 +1,45 @@
+{
+  "name": "ark-qrcode-react",
+  "version": "0.0.1",
+  "description": "A React component to generate QR codes for ARK payments.",
+  "main": "build/index.js",
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "dependencies": {
+    "qrious": "^4.0.2",
+    "react": "^16.2.0"
+  },
+  "scripts": {
+    "babel": "babel --presets es2015 src/index.js -o build/index.js",
+    "build": "webpack",
+    "start": "webpack --watch",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arkmoon/ark-qrcode-react.git"
+  },
+  "author": {
+    "name": "ArkMoon",
+    "email": "arkmoon.delegate@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ark",
+    "qrcode",
+    "react"
+  ],
+  "homepage": "http://www.arkmoon.com",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "webpack": "^3.10.0"
+  }
+}
