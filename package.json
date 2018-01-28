@@ -33,6 +33,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.24.1",
+    "babel-eslint": "^8.2.1",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
@@ -132,6 +133,8 @@
       "react/self-closing-comp": 1,
       "react/sort-comp": 1
     },
-    "globals": {}
+    "globals": {
+      "QRious": true
+    }
   }
 }

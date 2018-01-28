@@ -1,8 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import QRious from '../node_modules/qrious/dist/QRious';
+require('../node_modules/qrious/dist/QRious');
 
 class ArkQrCode extends React.Component {
+  componentDidMount = () => {
+    const scheme = this.generateSchema();
+
+    // Validate props input.
+    this.validateProps();
+
+    this.generateQRCode(scheme);
+  }
+
+  componentDidUpdate = () => {
+    const scheme = this.generateSchema();
+
+    this.generateQRCode(scheme);
+  }
+
   validateAddress = address => {
     const pattern = /^[AaDd]{1}[0-9a-zA-Z]{33}$/g;
 
@@ -58,7 +73,7 @@ class ArkQrCode extends React.Component {
   }
 
   validateURI = uri => {
-    const regex = new RegExp(/^(?:ark:)([AaDd]{1}[0-9a-zA-Z]{33})([-a-zA-Z0-9+&@#\/%=~_|$?!:,.]*)$/);
+    const regex = new RegExp(/^(?:ark:)([AaDd]{1}[0-9a-zA-Z]{33})([-a-zA-Z0-9+&@#/%=~_|$?!:,.]*)$/);
 
     if (regex.test(uri)) {
       return regex.exec(uri);
@@ -142,23 +157,8 @@ class ArkQrCode extends React.Component {
     this.validateVendorField(vendorField);
   }
 
-  componentDidMount = () => {
-    const scheme = this.generateSchema();
-
-    // Validate props input.
-    this.validateProps();
-
-    this.generateQRCode(scheme);
-  }
-
-  componentDidUpdate = () => {
-    const scheme = this.generateSchema();
-
-    this.generateQRCode(scheme);
-  }
-
   render() {
-    return <canvas ref={(el) => { this.qrCanvas = el; }} />
+    return <canvas ref={(el) => { this.qrCanvas = el; }} />;
   }
 }
 
