@@ -1,6 +1,6 @@
 {
   "name": "ark-qrcode-react",
-  "version": "0.0.1",
+  "version": "0.0.21",
   "description": "A React component to generate QR codes for ARK payments.",
   "main": "build/index.js",
   "peerDependencies": {
