@@ -37,7 +37,7 @@ class ArkQrCode extends React.Component {
   }
 
   validateVendorField = vendorField => {
-    if (typeof vendorField === 'string' && decodeURIComponent(vendorField) === vendorField) {
+    if (typeof vendorField !== 'string' || decodeURIComponent(vendorField) !== vendorField) {
       throw new Error('vendorField: must be a UTF-8 encoded string');
     }
 
@@ -47,7 +47,7 @@ class ArkQrCode extends React.Component {
   }
 
   validateLabel = label => {
-    if (typeof label === 'string' && decodeURIComponent(label) === label) {
+    if (typeof label !== 'string' && decodeURIComponent(label) !== label) {
       throw new Error('label: must be a UTF-8 encoded string');
     }
 
