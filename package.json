@@ -1,6 +1,6 @@
 {
   "name": "ark-qrcode-react",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "A React component to generate QR codes for ARK payments.",
   "main": "build/index.js",
   "peerDependencies": {
@@ -33,8 +33,8 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.24.1",
-    "babel-eslint": "^8.2.1",
-    "babel-loader": "^7.1.2",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "^7.1.4",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.5.1",
@@ -45,7 +45,7 @@
     "eslint-plugin-import": "2.7.0",
     "eslint-plugin-react": "7.3.0",
     "eslint-watch": "3.1.2",
-    "webpack": "^3.10.0"
+    "webpack": "^3.11.0"
   },
   "eslintConfig": {
     "root": true,
