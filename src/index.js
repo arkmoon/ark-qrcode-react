@@ -37,7 +37,7 @@ class ArkQrCode extends React.Component {
   }
 
   validateVendorField = vendorField => {
-    if (typeof vendorField !== 'string' || decodeURIComponent(vendorField) !== vendorField) {
+    if (typeof vendorField !== 'string' || vendorField !== encodeURIComponent(decodeURIComponent(vendorField))) {
       throw new Error('vendorField: must be a UTF-8 encoded string');
     }
 
@@ -47,7 +47,7 @@ class ArkQrCode extends React.Component {
   }
 
   validateLabel = label => {
-    if (typeof label !== 'string' && decodeURIComponent(label) !== label) {
+    if (typeof label !== 'string' || label !== encodeURIComponent(decodeURIComponent(label))) {
       throw new Error('label: must be a UTF-8 encoded string');
     }
 
@@ -114,7 +114,7 @@ class ArkQrCode extends React.Component {
     img.onload = () => {
       const logoWidth = img.width;
       const logoHeight = img.height;
-      const width = qr.size / 3.5;
+      const width = qr.size / 6;
       const height = logoHeight / logoWidth * width;
       let x = (qr.size / 2) - (width / 2);
       let y = (qr.size / 2) - (height / 2);
