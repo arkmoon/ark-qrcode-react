@@ -1,3 +1,5 @@
+# ARCHIVING FOR NOW DUE TO ARKPAY RELEASE.
+
 <img src="https://i.imgur.com/0ZlJHfL.png" width="100%">
 
 # ARK QR Code React Component
